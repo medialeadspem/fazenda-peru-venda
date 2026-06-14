@@ -1,0 +1,9 @@
+EL VIDEO NO SE INCLUYE EN ESTE ZIP PARA EVITAR EL ERROR DE DESCARGA POR TAMAÑO.
+
+Conserva o copia tu archivo original, sin cambiarle el nombre, en esta ruta:
+assets/video/hero.mp4
+
+Nombre obligatorio:
+hero.mp4
+
+El código ya está configurado para leerlo automáticamente.

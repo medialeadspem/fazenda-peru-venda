@@ -1,0 +1,12 @@
+VERSIÓN FINAL LIGERA
+
+Este paquete contiene todo el proyecto final corregido, excepto el archivo pesado:
+assets/video/hero.mp4
+
+Motivo: el archivo de video pesa aproximadamente 282 MB y provocaba un error de carga/descarga de la plataforma.
+
+PASO ÚNICO:
+Copia tu hero.mp4 original dentro de:
+assets/video/hero.mp4
+
+No cambies el nombre ni la extensión.

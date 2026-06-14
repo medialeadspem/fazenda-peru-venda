@@ -1,0 +1,9 @@
+Coloca aquí tus videos con estos nombres exactos:
+
+1) hero.mp4
+   Video de fondo del encabezado, detrás de “Madre de Dios”.
+
+2) vuelo-hacienda.mp4
+   Video de la sección “Vuelo sobre la hacienda”.
+
+Recomendación: exportar como MP4 H.264 + AAC para que Chrome/Edge lo reproduzcan sin errores.

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es" id="htmlRoot">
+<script>document.documentElement.classList.add('js');</script>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#080808">
+<title>Hacienda Madre de Dios — Propiedad Ganadera Premium · Perú</title>
+<meta name="description" content="526 hectáreas con 319 cabezas Brahman incluidas. Km 42 Carretera Interoceánica, Madre de Dios, Perú. Llave en mano. US$ 4.327.272.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hacienda Madre de Dios — 526 Ha · 319 Cabezas Brahman incluidas">
+<meta property="og:description" content="Propiedad ganadera completa en Madre de Dios, Perú. 526 ha llave en mano. US$ 4.327.272.">
+<meta property="og:image" content="https://haciendamadredios.com/assets/images/galeria/galeria-01.jpg">
+<meta property="og:url" content="https://haciendamadredios.com">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hacienda Madre de Dios — 526 Ha en Perú">
+<meta name="twitter:image" content="https://haciendamadredios.com/assets/images/galeria/galeria-01.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FFD100'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='serif' font-style='italic' font-weight='600' font-size='16' fill='%23080808'%3EHMD%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateListing","name":"Hacienda Madre de Dios — 526 Hectáreas","description":"526 ha con 319 cabezas Brahman. Infraestructura completa. Llave en mano.","offers":{"@type":"Offer","price":"4327272","priceCurrency":"USD"},"address":{"@type":"PostalAddress","addressRegion":"Madre de Dios","addressCountry":"PE","streetAddress":"Carretera Interoceánica Km 42, Laberinto, Tambopata"}}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Barlow+Condensed:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loadingScreen"><canvas id="lsCnv"></canvas><div class="ls-in"><div class="ls-mark">HMD</div><div class="ls-name">HACIENDA MADRE DE DIOS</div><div class="ls-track"><div class="ls-bar" id="lsBar"></div></div></div></div>
+
+<div class="prog" id="prog" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" id="cring" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="#inicio" class="nav-brand">
+    <span class="nmark">HMD</span>
+    <span class="nsep" aria-hidden="true"></span>
+    <span class="nname">Hacienda Madre de Dios</span>
+  </a>
+  <div class="nlinks" id="nlinks">
+    <a href="#propiedad" class="nl" data-i18n="nav.prop">Propiedad</a>
+    <a href="#galeria" class="nl" data-i18n="nav.gal">Galería</a>
+    <a href="#tour" class="nl">Tour 360°</a>
+    <a href="#video" class="nl" data-i18n="nav.video">Video</a>
+    <a href="#infraestructura" class="nl" data-i18n="nav.infra">Infraestructura</a>
+    <a href="#contacto" class="ncta">Contacto <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
+  </div>
+  <div class="nright"><div class="langw" id="langw"><button class="lbtn active" data-lang="es" aria-label="Español">ES</button><button class="lbtn" data-lang="pt" aria-label="Português">PT</button><button class="lbtn" data-lang="en" aria-label="English">EN</button></div>
+    <button class="abtn" id="abtn" aria-label="Música ambiental"><i class="fas fa-music" id="aico" aria-hidden="true"></i></button>
+    <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <a href="#propiedad" class="ml">La Propiedad</a>
+  <a href="#galeria" class="ml">Galería de Fotos</a>
+  <a href="#tour" class="ml">Tour Virtual 360°</a>
+  <a href="#video" class="ml">Video de Dron</a>
+  <a href="#infraestructura" class="ml">Infraestructura</a>
+  <a href="#contacto" class="mcta">Contactar ahora →</a>
+</div>
+
+<!-- ━━━━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="hero" id="inicio">
+  <canvas class="hcnv" id="hcnv" aria-hidden="true"></canvas>
+  <div class="hvid-wrap" id="hvidWrap" aria-hidden="true">
+    <video class="hvid" id="hvid" autoplay muted loop playsinline preload="auto" poster="assets/images/galeria/galeria-01.jpg">
+      <source id="hvidSrc" src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hbg" id="hbg"></div>
+  <div class="hovl"></div>
+  <div class="hgrain" aria-hidden="true"></div>
+  <div class="hbody">
+    <p class="heye" data-i18n="hero.eyebrow">PROPIEDAD PRIVADA · MADRE DE DIOS, PERÚ</p>
+    <h1 class="htitle">
+      <span class="hover">Hacienda</span>
+      <em class="hmain">Madre de Dios</em>
+    </h1>
+    <div class="hrule" aria-hidden="true"></div>
+    <div class="hdata">
+      <span>526 Hectáreas</span>
+      <span class="hdot" aria-hidden="true">·</span>
+      <span>319 Cabezas Brahman</span>
+      <span class="hdot" aria-hidden="true">·</span>
+      <span>US$ 4.327.272</span>
+      <span class="hdot" aria-hidden="true">·</span>
+      <span>Km 42, Interoceánica</span>
+    </div>
+    <div class="hbtns">
+      <a href="#galeria" class="btn by mag" data-i18n="hero.cta1">Ver la propiedad</a>
+      <a href="#contacto" class="btn bo" data-i18n="hero.cta2">Solicitar información</a>
+    </div>
+  </div>
+  <a href="#propiedad" class="hscrl" aria-label="Seguir">
+    <span class="hsl" aria-hidden="true"></span>
+    <span>BAJAR</span>
+  </a>
+  <audio id="audio" autoplay loop preload="auto" playsinline>
+    <source id="audioSrc" src="assets/audio/musica-ambiente.mp3" type="audio/mpeg">
+  </audio>
+  <div class="audio-notice" id="audioNotice" hidden role="status" aria-live="polite">
+    <i class="fas fa-music" aria-hidden="true"></i>
+    <span>Toca en cualquier parte para activar la música</span>
+  </div>
+</section>
+
+<!-- FICHA -->
+<div class="ficha">
+  <div class="fin">
+    <div class="fi"><b>526</b><span data-i18n="fi.ha">hectáreas totales</span></div>
+    <span class="fsep" aria-hidden="true"></span>
+    <div class="fi"><b>319</b><span data-i18n="fi.cab">cabezas Brahman incluidas</span></div>
+    <span class="fsep" aria-hidden="true"></span>
+    <div class="fi"><b>300</b><span data-i18n="fi.past">ha de pasturas</span></div>
+    <span class="fsep" aria-hidden="true"></span>
+    <div class="fi"><b>Km 42</b><span>Carretera Interoceánica</span></div>
+    <span class="fsep" aria-hidden="true"></span>
+    <div class="fi"><b>Llave en mano</b><span>lista para operar</span></div>
+  </div>
+</div>
+
+<!-- ━━━━━━ LA PROPIEDAD ━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="prop" id="propiedad">
+  <div class="pgrid">
+    <div class="ptxt sl-l">
+      <p class="ey">LA PROPIEDAD</p>
+      <h2 class="sh">Una hacienda completa<br>en la <em>Amazonia peruana</em></h2>
+      <p class="pbody">Ubicada en el Sector Víctor Raúl Haya de la Torre, Km 42 de la <strong>Carretera Interoceánica</strong> — la vía que conecta Perú directamente con Brasil — esta propiedad es una operación ganadera completamente equipada, lista para producir desde el primer día.</p>
+      <p class="pbody">Con <strong>319 cabezas de ganado Brahman incluidas en el precio</strong>, sistema hídrico completo, energía propia y caminos internos afirmados, el comprador recibe todo en pleno funcionamiento.</p>
+      <ul class="plist">
+        <li>Operación 100% lista, sin obras pendientes</li>
+        <li>319 cabezas Brahman de raza incluidas en la venta</li>
+        <li>Agua permanente: riacho Chonta, 2 afluentes y 2 pozos</li>
+        <li>Subestación eléctrica propia de 100 kw</li>
+        <li>Acceso directo por la Carretera Interoceánica</li>
+        <li>Título de propiedad registrado — documentación al día</li>
+      </ul>
+    </div>
+    <div class="pvis sl-r">
+      <div class="pmain"><img id="propertyMainImage" src="assets/images/galeria/galeria-01.jpg" alt="Área de pasturas — 300 hectáreas" loading="lazy" decoding="async"><div class="pcap" id="propertyMainCaption">Área de pasturas · 300 hectáreas</div></div>
+      <div class="pfloat"><img id="propertyCardImage" src="assets/images/galeria/galeria-02.png" alt="Ganado Brahman incluido" loading="lazy" decoding="async"><p id="propertyCardCaption">319 cabezas Brahman · Incluidas en el precio</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━ GALERÍA CAROUSEL ━━━━━━━━━━━━━━━━━━ -->
+<section class="gal" id="galeria">
+  <div class="ghdr">
+    <p class="ey">GALERÍA DE FOTOS</p>
+    <h2 class="sh ru">La propiedad en <em>imágenes</em></h2>
+  </div>
+  <div class="swiper gswiper">
+    <div class="swiper-wrapper" id="gallerySlides">
+      <div class="swiper-slide gslide">
+        <img src="assets/images/galeria/galeria-01.jpg" alt="Área de pasturas" loading="eager" decoding="async">
+        <div class="gcap"><span class="gcap-n">01 / 06</span><span class="gcap-t">Área de Pasturas — 300 Hectáreas</span></div>
+      </div>
+    </div>
+    <button class="swiper-button-prev g-prev" aria-label="Foto anterior"><i class="fas fa-arrow-left" aria-hidden="true"></i></button>
+    <button class="swiper-button-next g-next" aria-label="Siguiente foto"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+    <div class="swiper-pagination g-dots"></div>
+  </div>
+</section>
+
+<!-- ━━━━━━ TOUR 360° ━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="tour" id="tour">
+  <div class="thdr">
+    <p class="ey">EXPERIENCIA INMERSIVA</p>
+    <h2 class="sh ru">Tour Virtual <em>360°</em></h2>
+    <p class="tsub">Explore la vista general de la propiedad con libertad total de movimiento</p>
+  </div>
+  <div class="tstage">
+    <div class="pload" id="pload"><div class="pspin" aria-hidden="true"></div><p>Cargando panorámica...</p></div>
+    <div class="pinstr" id="pinstr"><i class="fas fa-hand-pointer" aria-hidden="true"></i><span>Arrastra para explorar · Pellizca para hacer zoom</span></div>
+    <div class="pano" id="panorama" role="application" aria-label="Visor 360°"></div>
+    <div class="tcard" id="tcard"><p class="tca" id="tca">Vista General</p><p class="tcd" id="tcd">Panorámica de las 526 hectáreas sobre la Carretera Interoceánica</p></div>
+    <div class="tcnt" id="tcnt"><span id="tidx">1</span> / <span id="ttot">1</span></div>
+    <div class="tctrl" aria-label="Controles del visor">
+      <button class="tcb" id="tzout" aria-label="Alejar"><i class="fas fa-minus" aria-hidden="true"></i></button>
+      <button class="tcb tcauto" id="tauto" aria-label="Auto-rotación" aria-pressed="true"><i class="fas fa-sync-alt" id="tautoico" aria-hidden="true"></i></button>
+      <button class="tcb" id="tzin" aria-label="Acercar"><i class="fas fa-plus" aria-hidden="true"></i></button>
+      <button class="tcb" id="tfs" aria-label="Pantalla completa"><i class="fas fa-expand" aria-hidden="true"></i></button>
+    </div>
+    <p class="tdev"><i class="fas fa-info-circle" aria-hidden="true"></i> Explore la vista general de la propiedad en recorrido 360°.</p>
+  </div>
+  <div class="ttabs" aria-label="Área disponible del tour">
+    <span class="tt active" aria-current="true">Vista General</span>
+  </div>
+</section>
+
+<!-- ━━━━━━ VIDEO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="vsec" id="video">
+  <div class="vhdr">
+    <p class="ey">VISTA DESDE EL AIRE</p>
+    <h2 class="sh ru">Vuelo sobre la <em>hacienda</em></h2>
+  </div>
+  <div class="vwrap">
+    <div class="vmedia" id="vmedia">
+      <video class="vauto" id="vdrone" autoplay muted loop playsinline controls preload="auto" poster="assets/images/galeria/galeria-03.png">
+        <source id="vdroneSrc" src="assets/video/vuelo-hacienda.mp4" type="video/mp4">
+        Su navegador no puede reproducir este video.
+      </video>
+      <div class="vshade" aria-hidden="true"></div>
+      <button class="vsound" id="vsound" type="button" aria-label="Activar o silenciar audio del video">
+        <i class="fas fa-volume-xmark" aria-hidden="true"></i>
+        <span>Activar sonido</span>
+      </button>
+      <div class="vbad" id="vbad" hidden>
+        <i class="fas fa-film" aria-hidden="true"></i>
+        <span>Video aéreo disponible próximamente.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━ INFRAESTRUCTURA ━━━━━━━━━━━━━━━━━━ -->
+<section class="infra" id="infraestructura">
+  <div class="ihdr ru">
+    <p class="ey">INFRAESTRUCTURA COMPLETA</p>
+    <h2 class="sh">Todo listo para <em>producir</em></h2>
+  </div>
+  <div class="ibody">
+    <div class="icol sl-l">
+      <h3>Sistema Hídrico</h3>
+      <ul>
+        <li>Riacho Chonta — caudal permanente</li>
+        <li>2 afluentes de quebrada propios</li>
+        <li>2 pozos tubulares (35 m profundidad)</li>
+        <li>Planta de tratamiento de agua</li>
+        <li>Tanque elevado de concreto — 18 m</li>
+        <li>14 ha de tubería para irrigación (6")</li>
+      </ul>
+    </div>
+    <div class="icol sl-l" style="--d:.12s">
+      <h3>Ganadería</h3>
+      <ul>
+        <li><strong>319 cabezas Brahman — incluidas</strong></li>
+        <li>300 ha pasto Brachiaria Decumbens</li>
+        <li>Potreros divididos con cerco de púas</li>
+        <li>Cerco perimetral completo</li>
+        <li>Torre de visión para el ganado</li>
+      </ul>
+    </div>
+    <div class="icol sl-l" style="--d:.24s">
+      <h3>Energía e Instalaciones</h3>
+      <ul>
+        <li>Subestación eléctrica propia — 100 kw</li>
+        <li>3 galpones de 10×10m</li>
+        <li>Caminos internos afirmados</li>
+        <li>Antena pararrayos instalada</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━ UBICACIÓN ━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="ubic" id="ubicacion">
+  <div class="uhdr">
+    <p class="ey">UBICACIÓN</p>
+    <h2 class="sh ru">Km 42, <em>Carretera Interoceánica</em></h2>
+    <p class="usub">La vía que conecta Perú directamente con Brasil</p>
+  </div>
+  <div class="ubody">
+    <div id="map" class="mapel" aria-label="Mapa de localización de la hacienda"></div>
+    <div class="upanel">
+      <h3>Datos de Localización</h3>
+      <div class="ur"><i class="fas fa-globe-americas" aria-hidden="true"></i><div><b>Departamento</b><span>Madre de Dios, Perú</span></div></div>
+      <div class="ur"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><div><b>Distrito / Provincia</b><span>Laberinto — Tambopata</span></div></div>
+      <div class="ur"><i class="fas fa-road" aria-hidden="true"></i><div><b>Vía de acceso</b><span>Km 42, Interoceánica PM–Cusco</span></div></div>
+      <div class="ur"><i class="fas fa-plane" aria-hidden="true"></i><div><b>Aeropuerto</b><span>Puerto Maldonado (~42 km)</span></div></div>
+      <div class="ur uhl"><i class="fas fa-flag" aria-hidden="true"></i><div><b>Conexión con Brasil</b><span>Enlace directo por la Interoceánica</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━ CONTACTO ━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="contact" id="contacto">
+  <div class="cgrid">
+    <div class="cl sl-l">
+      <p class="ey">CONTACTO</p>
+      <h2 class="sh">¿Le interesa<br>esta <em>propiedad?</em></h2>
+      <p class="ctxt">Nuestro equipo responde en español, el mismo día. Complete la solicitud y recibirá ficha técnica, ubicación, fotos, video y coordinación de visita directamente por WhatsApp.</p>
+      <div class="cms">
+        <a href="https://wa.me/51906233671?text=Hola%2C+me+interesa+la+Hacienda+Madre+de+Dios.+Quisiera+recibir+informaci%C3%B3n." target="_blank" rel="noopener" class="cm cm-wa">
+          <div class="cmico"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+          <div><b>WhatsApp Directo</b><span>+51 906 233 671 · Respuesta inmediata</span></div>
+          <i class="fas fa-arrow-up-right cmarr" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:contacto@haciendamadredios.com?subject=Consulta%20Hacienda%20Madre%20de%20Dios" class="cm cm-em">
+          <div class="cmico"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+          <div><b>Correo electrónico</b><span>contacto@haciendamadredios.com</span></div>
+          <i class="fas fa-arrow-up-right cmarr" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <div class="cr sl-r">
+      <div class="fwrap">
+        <p class="ftitle">Solicite ficha técnica, precio y visita privada</p>
+        <form id="cform" novalidate>
+          <div class="fg"><label for="fn" data-i18n="form.nombre">Nombre completo <span class="req" aria-hidden="true">*</span></label><input id="fn" type="text" name="nombre" placeholder="Su nombre completo" required autocomplete="name"><span class="ferr" id="errnombre" role="alert"></span></div>
+          <div class="fg">
+            <label for="ft" data-i18n="form.tel">WhatsApp / Teléfono <span class="req" aria-hidden="true">*</span></label>
+            <input id="ft" type="tel" name="telefono" placeholder="+51 900 000 000" autocomplete="tel" inputmode="tel" required>
+            <span class="ferr" id="errcontact" role="alert"></span>
+          </div>
+          <div class="fg2">
+            <div class="fg">
+              <label for="fi" data-i18n="form.interes">Nivel de interés</label>
+              <select id="fi" name="interes">
+                <option value="" data-i18n-opt="opt0">Seleccione una opción...</option>
+                <option value="visita" data-i18n-opt="opt1">Muy interesado — quiero coordinar una visita</option>
+                <option value="info" data-i18n-opt="opt2">Interesado — quisiera ficha técnica, fotos y video</option>
+                <option value="evaluando" data-i18n-opt="opt3">Estoy evaluando opciones de inversión</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="fp" data-i18n="form.perfil">Perfil</label>
+              <select id="fp" name="perfil">
+                <option value="" data-i18n-opt="perfil0">Seleccione...</option>
+                <option value="comprador_directo" data-i18n-opt="perfil1">Comprador directo</option>
+                <option value="inversionista" data-i18n-opt="perfil2">Inversionista</option>
+                <option value="empresa" data-i18n-opt="perfil3">Empresa / grupo</option>
+                <option value="intermediario" data-i18n-opt="perfil4">Intermediario</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg2">
+            <div class="fg">
+              <label for="fr" data-i18n="form.recibir">Deseo recibir</label>
+              <select id="fr" name="recibir">
+                <option value="ficha" data-i18n-opt="recibir1">Ficha técnica + ubicación</option>
+                <option value="video" data-i18n-opt="recibir2">Video completo + fotos</option>
+                <option value="visita" data-i18n-opt="recibir3">Coordinar visita privada</option>
+                <option value="todo" data-i18n-opt="recibir4">Toda la información disponible</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="fplazo" data-i18n="form.plazo">Tiempo de decisión</label>
+              <select id="fplazo" name="plazo">
+                <option value="inmediato" data-i18n-opt="plazo1">Lo antes posible</option>
+                <option value="semana" data-i18n-opt="plazo2">Esta semana</option>
+                <option value="mes" data-i18n-opt="plazo3">Durante este mes</option>
+                <option value="sin_fecha" data-i18n-opt="plazo4">Aún sin fecha definida</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg"><label for="fm" data-i18n="form.msg">Mensaje</label><textarea id="fm" name="mensaje" rows="3" placeholder="Deseo recibir más información sobre la Hacienda Madre de Dios..."></textarea></div>
+          <button type="submit" class="btn by bfull mag" id="fsbtn"><span id="fsbtntxt" data-i18n="form.send">Enviar solicitud por WhatsApp</span><i class="fab fa-whatsapp" id="fsbtnico" aria-hidden="true"></i></button>
+          <p class="fnote"><i class="fas fa-lock" aria-hidden="true"></i> Su información es confidencial y solo se usará para contactarle por esta propiedad.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="ftop">
+    <div class="fbrand"><span class="nmark">HMD</span><div><b>Hacienda Madre de Dios</b><span>Madre de Dios, Perú · Carretera Interoceánica Km 42</span></div></div>
+    <div class="fdata"><span>526 ha</span><span class="fdot" aria-hidden="true">·</span><span>319 Cabezas Brahman</span><span class="fdot" aria-hidden="true">·</span><span>US$ 4.327.272</span></div>
+  </div>
+  <div class="fbtm"><span>© <span id="currentYear">2026</span> Hacienda Madre de Dios · Todos los derechos reservados</span><span>Material visual de la propiedad · Medios configurables desde assets</span></div>
+</footer>
+
+<button class="btop" id="btop" aria-label="Volver al inicio"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+
+<a href="https://wa.me/51906233671?text=Hola%2C+me+interesa+la+Hacienda+Madre+de+Dios.+%C2%BFPodría+darme+más+información%3F" target="_blank" rel="noopener" class="wafloat" id="wafloat" aria-label="Consultar por WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  <span class="watxt">Consultar ahora</span>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/media-config.js"></script>
+<script src="js/tour.js"></script>
+<script src="js/map.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+HACIENDA MADRE DE DIOS — VERSIÓN FINAL
+=======================================
+
+1) ABRIR EL PROYECTO
+   Abra esta carpeta con Visual Studio Code y ejecútela con Live Server.
+
+2) GALERÍA DE FOTOS
+   Reemplace los archivos conservando exactamente sus nombres:
+   assets/images/galeria/galeria-01.jpg
+   assets/images/galeria/galeria-02.png
+   assets/images/galeria/galeria-03.png
+   assets/images/galeria/galeria-04.png
+
+   La sección “Una hacienda completa en la Amazonia peruana” usa:
+   - Imagen grande: galeria-01.jpg
+   - Tarjeta pequeña: galeria-02.png
+
+3) VISOR 360°
+   Existe una sola escena: Vista General.
+   Reemplace únicamente:
+   assets/images/360/vista-general.jpg
+
+   Para máxima compatibilidad móvil, use una panorámica equirectangular 2:1
+   de hasta 8192 x 4096 px.
+
+4) VIDEOS
+   Se conservaron las rutas y nombres originales. No fueron modificados:
+   assets/video/hero.mp4
+   assets/video/vuelo-hacienda.mp4
+
+5) MÚSICA
+   Reemplace manteniendo el nombre:
+   assets/audio/musica-ambiente.mp3
+
+6) CONFIGURACIÓN CENTRAL
+   js/media-config.js
+
+7) PUBLICACIÓN
+   Suba toda la carpeta conservando la estructura exacta de archivos.

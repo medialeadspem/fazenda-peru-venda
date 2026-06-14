@@ -1,0 +1,18 @@
+IMÁGENES LOCALES DEL PROYECTO
+=============================
+
+Carpeta de galería:
+assets/images/galeria/
+
+Archivos actuales que puedes reemplazar sin cambiar el nombre:
+- galeria-01.jpg
+- galeria-02.png
+- galeria-03.png
+- galeria-04.png
+
+Uso en la sección “Una hacienda completa en la Amazonia peruana”:
+- Imagen grande: galeria-01.jpg
+- Tarjeta lateral: galeria-02.png
+
+La configuración está en:
+js/media-config.js

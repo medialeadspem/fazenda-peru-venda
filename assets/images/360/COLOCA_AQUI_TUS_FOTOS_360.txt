@@ -1,0 +1,14 @@
+VISOR 360° — UNA SOLA ESCENA
+============================
+
+Reemplaza únicamente este archivo conservando exactamente el nombre:
+
+vista-general.jpg
+
+Ruta completa:
+assets/images/360/vista-general.jpg
+
+Formato recomendado para móviles:
+- Panorámica equirectangular 2:1
+- Máximo 8192 x 4096 px
+- JPG optimizado

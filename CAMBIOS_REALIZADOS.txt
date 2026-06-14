@@ -1,0 +1,31 @@
+CAMBIOS REALIZADOS — VERSIÓN FINAL
+==================================
+
+1. VISOR 360°
+- Se dejó una sola escena y una sola casilla: Vista General.
+- Se retiraron Pasturas, Galpones, Recursos Hídricos y Caminos del selector y del código.
+- Se eliminaron hotspots de navegación entre escenas.
+- Se agregó un mensaje de error local si falta vista-general.jpg.
+
+2. IMÁGENES
+- Toda la página usa archivos locales del proyecto.
+- Se corrigió el bloque “Una hacienda completa en la Amazonia peruana”.
+- La imagen grande usa galeria-01.jpg.
+- La tarjeta pequeña usa galeria-02.png.
+- La galería reconoce variantes de extensión sin cambiar la base del nombre.
+
+3. SCROLL Y ANIMACIONES
+- Se eliminó la ejecución duplicada del motor de scroll.
+- Se eliminó la animación que sobrescribía transformaciones de los títulos.
+- Se unificaron las entradas de texto con transparencia suave y movimiento corto.
+- Se agregó compatibilidad con la preferencia del sistema “Reducir movimiento”.
+- Se añadieron ajustes para evitar parpadeos de composición en Safari y móviles.
+
+4. MULTIMEDIA
+- Los archivos MP4 y sus nombres no fueron modificados.
+- La música y su control permanecen intactos.
+- Los posters ahora son imágenes locales existentes.
+
+5. RESPONSIVE
+- Se corrigió el comportamiento de la tarjeta de imagen superpuesta en pantallas pequeñas.
+- Se sincronizó correctamente el icono de pantalla completa del visor.

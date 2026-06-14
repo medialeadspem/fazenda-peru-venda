@@ -1,0 +1,11 @@
+REEMPLAZAR LA MÚSICA
+====================
+
+1. Coloca aquí tu archivo MP3.
+2. Debe llamarse exactamente: musica-ambiente.mp3
+3. Reemplaza el archivo actual.
+4. Recarga la página con Ctrl + F5.
+
+También puedes cambiar la ruta y el volumen en js/media-config.js:
+- backgroundAudio
+- backgroundAudioVolume
