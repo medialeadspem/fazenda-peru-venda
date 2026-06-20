@@ -16,9 +16,9 @@ window.HMD_MEDIA = {
   whatsapp: '51906233671',
 
   // No se modifican los MP4: solo se respetan estas rutas y nombres.
-  heroVideo: 'https://res.cloudinary.com/dvq6nci9k/video/upload/hero_1080_eiud6c.mp4',
+  heroVideo: 'assets/video/hero.mp4',
   heroPoster: 'assets/images/galeria/galeria-01.jpg',
-  droneVideo: 'https://res.cloudinary.com/dvq6nci9k/video/upload/demo_1080_r3qs7p.mp4',
+  droneVideo: 'assets/video/vuelo-hacienda.mp4',
   dronePoster: 'assets/images/galeria/galeria-03.jpg',
 
   // Reemplaza este archivo manteniendo exactamente el mismo nombre.
