@@ -1,0 +1,32 @@
+AUDITORÍA TÉCNICA FINAL
+=======================
+
+ERRORES IMPORTANTES DETECTADOS Y CORREGIDOS
+
+- El scroll se actualizaba por requestAnimationFrame y por un segundo ticker al mismo tiempo.
+  Resultado anterior: pequeños saltos o parpadeos intermitentes.
+  Corrección: desplazamiento nativo y un solo sistema de observación.
+
+- Los títulos recibían simultáneamente transformaciones de tres efectos distintos.
+  Resultado anterior: movimientos bruscos y elementos que podían reaparecer.
+  Corrección: una sola animación de entrada, corta y controlada.
+
+- Las imágenes del bloque de propiedad apuntaban inicialmente a recursos externos y luego
+  eran reemplazadas por JavaScript.
+  Resultado anterior: destello, demora o imagen distinta durante la carga.
+  Corrección: rutas locales correctas desde el HTML y desde la configuración.
+
+- La tarjeta pequeña solicitaba galeria-02.jpg cuando el archivo real era galeria-02.png.
+  Corrección: la ruta coincide con el archivo real y sigue existiendo detección de extensión.
+
+- El visor 360 cargaba cinco escenas, aunque cuatro archivos no estaban presentes.
+  Corrección: una única escena real y un único archivo requerido.
+
+- El visor usaba un recurso externo de emergencia.
+  Corrección: no hay panorámicas externas; si falta el archivo aparece un aviso propio.
+
+- El icono de pantalla completa podía quedar desincronizado al salir con Escape.
+  Corrección: escucha de fullscreenchange y webkitfullscreenchange.
+
+- Las animaciones podían ocultar contenido si JavaScript fallaba.
+  Corrección: el contenido es visible por defecto y solo se anima con la clase html.js.

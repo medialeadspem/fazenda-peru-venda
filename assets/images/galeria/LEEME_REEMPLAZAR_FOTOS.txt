@@ -1,0 +1,11 @@
+REEMPLAZO DE GALERÍA
+====================
+
+Reemplaza los archivos conservando exactamente sus nombres:
+- galeria-01.jpg
+- galeria-02.png
+- galeria-03.png
+- galeria-04.png
+
+No es necesario editar index.html.
+La página lee estas rutas desde js/media-config.js.

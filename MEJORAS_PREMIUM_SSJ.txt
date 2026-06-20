@@ -1,0 +1,16 @@
+MEJORAS PREMIUM SSJ — HACIENDA MADRE DE DIOS
+
+Se mejoró el proyecto sin cambiar datos ni contenido textual.
+
+Incluye:
+- Capa visual premium aditiva en css/style.css.
+- Nuevo archivo js/premium-effects.js para scroll reveal fino, spotlight interactivo, parallax suave y microinteracciones.
+- Hero con más profundidad, dorado premium, mejor legibilidad y CTA más potente.
+- Ficha de métricas con acabado ejecutivo.
+- Cards, galería, tour 360, mapa, infraestructura y formulario con vidrio premium, sombras finas y bordes elegantes.
+- Animaciones optimizadas con soporte para prefers-reduced-motion.
+- Navegación con estado activo y mejor sensación de producto terminado.
+- No se modificó el texto comercial, datos, números, ubicación, contacto ni estructura de contenido.
+
+Recomendación de publicación:
+Subir el contenido completo a Netlify / Cloudflare Pages / HostGator manteniendo las carpetas css, js y assets.
